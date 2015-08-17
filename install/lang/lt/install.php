@@ -31,7 +31,11 @@
 defined('MOODLE_INTERNAL') || die();
 
 $string['admindirname'] = 'Administratoriaus katalogas';
+<<<<<<< HEAD
 $string['availablelangs'] = 'Galimi kalbų paketai';
+=======
+$string['availablelangs'] = 'Galimų kalbų sąrašas';
+>>>>>>> 39abbc9dde1fc990a47e6992eda8d3fd6701f07e
 $string['chooselanguagehead'] = 'Pasirinkite kalbą';
 $string['chooselanguagesub'] = 'Pasirinkite diegimo kalbą. Ši kalba bus naudojama ir kaip numatytoji svetainės kalba, nors vėliau ją bus galima pakeisti.';
 $string['clialreadyconfigured'] = 'Failas config.php jau yra, prašau naudoti admin/cli/install_database.php jei norite įrašyti šią svetainę.';

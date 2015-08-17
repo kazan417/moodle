@@ -40,7 +40,11 @@ $string['cliinstallheader'] = 'Програма за инсталирање на
 $string['databasehost'] = 'Домаќин на базата на податоци';
 $string['databasename'] = 'Име на базата на податоци';
 $string['databasetypehead'] = 'Одбери го двигателот на базата за податоци';
+<<<<<<< HEAD
 $string['dataroot'] = 'Директориум за податоци';
+=======
+$string['dataroot'] = 'Директориум';
+>>>>>>> 39abbc9dde1fc990a47e6992eda8d3fd6701f07e
 $string['datarootpermission'] = 'Дозвола за директориумот за податоци';
 $string['dbprefix'] = 'Префикс на табели';
 $string['dirroot'] = 'Moodle директориум';

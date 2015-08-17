@@ -1826,13 +1826,21 @@ class core_renderer extends renderer_base {
      * @param string $selected selected element
      * @param array $nothing
      * @param string $formid
+     * @param array $attributes other attributes for the single select
      * @return string HTML fragment
      */
-    public function single_select($url, $name, array $options, $selected = '', $nothing = array('' => 'choosedots'), $formid = null) {
+    public function single_select($url, $name, array $options, $selected = '',
+                                $nothing = array('' => 'choosedots'), $formid = null, $attributes = array()) {
         if (!($url instanceof moodle_url)) {
             $url = new moodle_url($url);
         }
         $select = new single_select($url, $name, $options, $selected, $nothing, $formid);
+
+        if (array_key_exists('label', $attributes)) {
+            $select->set_label($attributes['label']);
+            unset($attributes['label']);
+        }
+        $select->attributes = $attributes;
 
         return $this->render($select);
     }
@@ -3174,7 +3182,7 @@ EOD;
         }
 
         // Get some navigation opts.
-        $opts = user_get_user_navigation_info($user, $this->page, $this->page->course);
+        $opts = user_get_user_navigation_info($user, $this->page);
 
         $avatarclasses = "avatars";
         $avatarcontents = html_writer::span($opts->metadata['useravatar'], 'avatar current');

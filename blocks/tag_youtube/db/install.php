@@ -14,19 +14,23 @@
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
-namespace core\progress;
-
-defined('MOODLE_INTERNAL') || die();
+/**
+ * Tag Youtube block installation.
+ *
+ * @package    block_tag_youtube
+ * @copyright  2015 Jun Pataleta
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
 
 /**
- * Progress handler that ignores progress entirely.
+ * Sets the install values for the tag_youtube entry in the block table.
  *
- * @package core_progress
- * @copyright 2013 The Open University
- * @license http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ * @return void
  */
-class null extends base {
-    public function update_progress() {
-        // Do nothing.
-    }
+function xmldb_block_tag_youtube_install() {
+    global $DB;
+
+    // Disable this block by default.
+    $DB->set_field('block', 'visible', 0, array('name' => 'tag_youtube'));
 }
+

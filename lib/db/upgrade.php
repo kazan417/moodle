@@ -4387,20 +4387,35 @@ function xmldb_main_upgrade($oldversion) {
     // Moodle v2.9.0 release upgrade line.
     // Put any upgrade step following this.
 
+<<<<<<< HEAD
     if ($oldversion < 2015051100.05) {
 
         // Sites that were upgrading from 2.7 and older will ignore this step.
         if (empty($CFG->upgrade_minmaxgradestepignored)) {
+=======
+    if ($oldversion < 2015060400.02) {
+
+        // Sites that were upgrading from 2.7 and older will ignore this step.
+        if (empty($CFG->upgrade_minmaxgradestepignored)) {
+
+>>>>>>> 39abbc9dde1fc990a47e6992eda8d3fd6701f07e
             upgrade_minmaxgrade();
 
             // Flags this upgrade step as already run to prevent it from running multiple times.
             set_config('upgrade_minmaxgradestepignored', 1);
         }
 
+<<<<<<< HEAD
         upgrade_main_savepoint(true, 2015051100.05);
     }
 
     if ($oldversion < 2015051100.08) {
+=======
+        upgrade_main_savepoint(true, 2015060400.02);
+    }
+
+    if ($oldversion < 2015061900.00) {
+>>>>>>> 39abbc9dde1fc990a47e6992eda8d3fd6701f07e
         // MDL-49257. Changed the algorithm of calculating automatic weights of extra credit items.
 
         // Before the change, in case when grade category (in "Natural" agg. method) had items with
@@ -4417,10 +4432,17 @@ function xmldb_main_upgrade($oldversion) {
         }
 
         // Main savepoint reached.
+<<<<<<< HEAD
         upgrade_main_savepoint(true, 2015051100.08);
     }
 
     if ($oldversion < 2015051100.10) {
+=======
+        upgrade_main_savepoint(true, 2015061900.00);
+    }
+
+    if ($oldversion < 2015062500.01) {
+>>>>>>> 39abbc9dde1fc990a47e6992eda8d3fd6701f07e
         // MDL-48239. Changed calculated grade items so that the maximum and minimum grade can be set.
 
         // If the changes are accepted and a regrade is done on the gradebook then some grades may change significantly.
@@ -4437,7 +4459,11 @@ function xmldb_main_upgrade($oldversion) {
         }
 
         // Main savepoint reached.
+<<<<<<< HEAD
         upgrade_main_savepoint(true, 2015051100.10);
+=======
+        upgrade_main_savepoint(true, 2015062500.01);
+>>>>>>> 39abbc9dde1fc990a47e6992eda8d3fd6701f07e
     }
 
     return true;

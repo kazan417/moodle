@@ -26,6 +26,10 @@
 
 defined('MOODLE_INTERNAL') || die();
 
+<<<<<<< HEAD
 $plugin->version   = 2015051101;        // The current plugin version (Date: YYYYMMDDXX)
+=======
+$plugin->version   = 2015052200;        // The current plugin version (Date: YYYYMMDDXX)
+>>>>>>> 39abbc9dde1fc990a47e6992eda8d3fd6701f07e
 $plugin->requires  = 2015050500;        // Requires this Moodle version
 $plugin->component = 'repository_youtube'; // Full name of the plugin (used for diagnostics)
